@@ -1,0 +1,3 @@
+#!/bin/bash
+
+./nordea-csv.py | hledger -f - --rules-file nordea.rules print

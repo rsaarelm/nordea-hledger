@@ -1,1 +1,3 @@
 Tool to import transaction logs from Nordea Bank into hledger
+
+Usage: ./nordea-hledger < Tapahtumat_FI123123123123.txt > hledger.journal

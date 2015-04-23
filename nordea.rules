@@ -1,0 +1,63 @@
+# Kirjauspäivä,Arvopäivä,Maksupäivä,Määrä,Saaja/Maksaja,Tilinumero,BIC,Tapahtuma,Viite,Maksajan viite,Viesti,Kortinnumero,Kuitti,
+fields date,_,_,amount,description
+currency €
+date-format %d.%m.%Y
+account1 assets:bank:checking
+
+if palkka
+    account2 income:salary
+
+if alepa
+    account2 expenses:groceries
+if k supermarket
+    account2 expenses:groceries
+if k citymarket
+    account2 expenses:groceries
+if s market
+    account2 expenses:groceries
+if lidl
+    account2 expenses:groceries
+if siwa
+    account2 expenses:groceries
+if k extra
+    account2 expenses:groceries
+if suomen lähikauppa
+    account2 expenses:groceries
+
+if ravintola
+    account2 expenses:food
+if pizza
+    account2 expenses:food
+if lounas
+    account2 expenses:food
+if alko
+    account2 expenses:food:booze
+
+if verkkokauppa.com
+    account2 expenses:gear
+if clas ohlson
+    account2 expenses:gear
+if anttila
+    account2 expenses:gear
+if ikea
+    account2 expenses:furniture
+
+if as oy
+    account2 expenses:utils:rent
+if apteekki
+    account2 expenses:medical
+if nordea
+    account2 expenses:banking
+if energia
+    account2 expenses:utils:power
+if vakuutus
+    account2 expenses:fees:insurance
+
+if taksi
+    account2 expenses:taxi
+
+if veronkanto
+    account2 expenses:tax
+if ennakonpalautus
+    account2 income:tax-refund
+
