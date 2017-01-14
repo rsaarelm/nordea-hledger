@@ -7,38 +7,32 @@ account1 assets:bank:checking
 if palkka
     account2 income:salary
 
-if alepa
-    account2 expenses:groceries
-if k supermarket
-    account2 expenses:groceries
-if k citymarket
-    account2 expenses:groceries
-if s market
-    account2 expenses:groceries
-if lidl
-    account2 expenses:groceries
-if siwa
-    account2 expenses:groceries
-if k extra
-    account2 expenses:groceries
-if suomen lähikauppa
+if
+alepa
+k supermarket
+k citymarket
+s market
+lidl
+siwa
+k extra
+suomen lähikauppa
     account2 expenses:groceries
 
-if ravintola
-    account2 expenses:food
-if pizza
-    account2 expenses:food
-if lounas
-    account2 expenses:food
+if
+ravintola
+pizza
+lounas
+    account2 expenses:eating-out
+
 if alko
-    account2 expenses:food:booze
+    account2 expenses:booze
 
-if verkkokauppa.com
+if
+verkkokauppa.com
+clas ohlson
+anttila
     account2 expenses:gear
-if clas ohlson
-    account2 expenses:gear
-if anttila
-    account2 expenses:gear
+
 if ikea
     account2 expenses:furniture
 
@@ -60,4 +54,3 @@ if veronkanto
     account2 expenses:tax
 if ennakonpalautus
     account2 income:tax-refund
-
