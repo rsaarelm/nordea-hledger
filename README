@@ -17,10 +17,8 @@ I copy-paste them as comments to the journal, and get something like this:
         expenses:credit-card        €39.99
         assets:bank:checking       €-39.99
 
-Next, using Vim, load the following macro into register a by moving cursor
+Next, using Vim, load the macro in vim-macro.txt into register a by moving cursor
 over the starting 'm' and typing `"ay$`
-
-    mz/^2yt 'zPavwwwwwwwwwwndiJ$? rl€l    expenses:unknown            yypRassets:bank:checking       €-k�kbe:noh
 
 Now at the start of the line for each credit statment line, run the macro with
 `@a`. It'll extract the date from the ledger item below and convert the item
