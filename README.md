@@ -1,6 +1,9 @@
+# Nordea-Hledger
+
 Tool to import transaction logs from Nordea Bank into hledger
 
-Usage: ./nordea-hledger < Tapahtumat_FI123123123123.txt > hledger.journal
+Usage:
+    ./nordea-hledger < Tapahtumat_FI123123123123.txt > hledger.journal
 
 ## Itemizing credit card statements
 
@@ -17,8 +20,8 @@ I copy-paste them as comments to the journal, and get something like this:
         expenses:credit-card        €39.99
         assets:bank:checking       €-39.99
 
-Next, using Vim, load the macro in vim-macro.txt into register a by moving cursor
-over the starting 'm' and typing `"ay$`
+Next, using Vim, load the macro in [vim-macro.txt](vim-macro.txt) into register
+a by moving cursor over the starting 'm' and typing `"ay$`
 
 Now at the start of the line for each credit statment line, run the macro with
 `@a`. It'll extract the date from the ledger item below and convert the item
