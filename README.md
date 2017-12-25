@@ -20,8 +20,9 @@ I copy-paste them as comments to the journal, and get something like this:
         expenses:credit-card        €39.99
         assets:bank:checking       €-39.99
 
-Next, using Vim, load the macro in [vim-macro.txt](vim-macro.txt) into register
-a by moving cursor over the starting 'm' and typing `"ay$`
+The following Vim search-replace string (corrected for current year) reformats the comment lines into hledger entries:
+
+    :s/.\s\+\(\d\d\).\(\d\d\). ......\s[^ ]\+\s\+\(.*\) \(\d\+.\d\d\)$/2017\/\2\/\1 \3\r    expenses:unknown            €\4\r    assets:bank:checking       €-\4\r/
 
 Now at the start of the line for each credit statment line, run the macro with
 `@a`. It'll extract the date from the ledger item below and convert the item
