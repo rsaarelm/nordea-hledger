@@ -3,7 +3,8 @@
 Tool to import transaction logs from Nordea Bank into hledger
 
 Usage:
-    ./nordea-hledger < Tapahtumat_FI123123123123.txt > hledger.journal
+    ./nordea-csv.py < Tapahtumat_FI123123123123.txt > nordea.csv
+    hledger print -f nordea.csv
 
 ## Itemizing credit card statements
 
